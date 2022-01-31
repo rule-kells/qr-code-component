@@ -104,6 +104,7 @@ Layout Land and Cube CSS
 }
 
 .component img {
+  --br: 0.625rem;
   max-width: 288px;
   border-radius: var(--br);
 }
