@@ -1,0 +1,130 @@
+:root {
+  /* ~ Colors ~ */
+
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+
+  /* ~ Typography ~ */
+
+  /* # font size */
+
+  /* Body Copy  */
+
+  --fs-title: 1.375rem;
+  --fs-body: 0.9375rem;
+
+  /* # font weight  */
+  --fw-400: 400;
+  --fw-700: 700;
+
+  /* # font family */
+  --ff-primary: 'Outfit', sans-serif;
+
+  --box-shadow: 0 25px 25px hsla(0, 0%, 0%, 0.05);
+  --br: 1.25rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--light-gray);
+  color: var(--grayish-blue);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body); /*unless specified otherwise*/
+  font-weight: var(--fw-400);
+  line-height: 1.8em;
+  margin: 0;
+  min-height: 100vh;
+  margin: 0 1em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+/* any ul that has a class on it has these properties */
+ul[class] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  width: 100%;
+  display: block; /* this is something you'll use often but more optional*/
+}
+
+/*
+Flow content:
+consistency using utilities classes to behave like regular flow content when we have done some CSS resetting. 
+Layout Land and Cube CSS
+*/
+.flow-content > * + * {
+  margin-top: 1rem;
+}
+
+.component {
+  background-color: var(--white);
+  max-width: 320px;
+  border-radius: var(--br);
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em 1em 2.5em 1em;
+  box-shadow: var(--box-shadow);
+}
+
+.component img {
+  max-width: 288px;
+}
+
+.component h1 {
+  color: var(--dark-blue);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-700);
+  line-height: 1.4;
+  margin: 1.5rem 0 1rem;
+}
+
+.component p {
+  letter-spacing: 0.19px;
+  padding: 0 1.4em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
